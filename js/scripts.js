@@ -34,6 +34,36 @@ $(() => {
 	})
 
 
+    const swiper = new Swiper('.swiper-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 40
+          }
+        }
+      })
+
+
+
     $(document).on('change', '.error', function () {
 
         $(this).removeClass('error');

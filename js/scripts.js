@@ -54,8 +54,8 @@ $(() => {
         slidesPerView: 3,
         spaceBetween: 10,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-button-next2',
+            prevEl: '.swiper-button-prev2'
         },
         pagination: {
             el: '.swiper-pagination',
@@ -88,8 +88,8 @@ $(() => {
         slidesPerView: 3,
         spaceBetween: 10,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-button-next3',
+            prevEl: '.swiper-button-prev3'
         },
         pagination: {
             el: '.swiper-pagination',
@@ -121,8 +121,8 @@ $(() => {
         slidesPerView: 4,
         spaceBetween: 30,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-button-next4',
+            prevEl: '.swiper-button-prev4'
         },
         pagination: {
             el: '.swiper-pagination',

@@ -513,12 +513,26 @@ header .menu .item.current-menu-item>a {
 .about_title {
 }
 .title {
+    font-family: 'DolceCaffe-Regular';
+    font-size: 70px;
+    line-height: 82px;
+    color: #212121;
+    margin-bottom: 24px;
 }
 .about_text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 191%;
+    color: #212121;
 }
-.text {
+.text p {
+    margin-bottom: 25px;
+}
+.text p:last-child {
+    margin-bottom: 0px;
 }
 .about_items {
+    margin-top: 24px;
 }
 .about_item {
 }
@@ -527,5 +541,13 @@ header .menu .item.current-menu-item>a {
 .about_item-text {
 }
 .about_img {
+    width: 585px;
+    height: 585px;
+}
+.about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 

@@ -496,10 +496,16 @@ header .menu .item.current-menu-item>a:after {
     align-items: center;
 }
 .header_links a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     margin-left: 8px;
     transition: all .4s;
+    border: 1px solid #FFFFFF;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; 
 }
 .header_links a:hover {
     transform: translateY(-7px);
@@ -507,6 +513,31 @@ header .menu .item.current-menu-item>a:after {
 }
 .header_links-mob {
     display: none;
+}
+.header_links a:nth-child(1) .icon {
+    width: 20px;
+    height: 18px;
+    fill: #fff;
+}
+.header_links a:nth-child(2) .icon {
+    width: 19px;
+    height: 12px;
+    fill: #fff;
+}
+.header_links a:nth-child(3) .icon {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+.header_links a:nth-child(4) .icon {
+    width: 10px;
+    height: 18px;
+    fill: #fff;
+}
+.header_links a:nth-child(5) .icon {
+    width: 20px;
+    height: 14px;
+    fill: #fff;
 }
 
 

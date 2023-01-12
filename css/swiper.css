@@ -3,8 +3,8 @@
 {
     color: rgba(255, 255, 255, .24);
 
-    top: auto;
-    bottom: 100%;
+
+    bottom: 50%;
 
     display: flex;
 
@@ -23,13 +23,12 @@
 
 .swiper-button-prev
 {
-    right: 48px;
-    left: auto;
+    left: calc(50% - 620px);
 }
 
 .swiper-button-next
 {
-    right: 0;
+    left: calc(50% + 620px);
 }
 
 .swiper-button-next:after,
@@ -44,13 +43,8 @@
 {
     display: block;
 
-    width: 32px;
-    height: 32px;
-}
-
-.swiper-button-next .icon
-{
-    transform: rotate(180deg);
+    width: 11px;
+    height: 18px;
 }
 
 

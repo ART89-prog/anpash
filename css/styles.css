@@ -419,12 +419,10 @@ header::before {
 }
 header .mob_menu_btn {
     display: none;
-
     width: 30px;
     height: 28px;
     margin-right: 0px;
     margin-left: auto;
-
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -436,7 +434,6 @@ header .mob_menu_btn .icon {
     width: 20px;
     height: 18px;
 }
-
 header .close_btn {
     color: #000;    
     position: absolute;
@@ -475,11 +472,24 @@ header .menu .item > a {
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid transparent;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
 }
-header .menu .item:hover>a,
-header .menu .item.current-menu-item>a {
-    border-bottom: 1px solid #fff;
+header .menu .item > a:after {
+    background-color: #fff;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;  
+}
+header .menu .item:hover>a:after,
+header .menu .item.current-menu-item>a:after {
+    width: 100%;
 }
 .header_links {
     display: flex;
@@ -511,8 +521,6 @@ header .menu .item.current-menu-item>a {
 }
 .about_info {
     width: calc(100% - 615px);
-}
-.about_title {
 }
 .title {
     font-family: 'DolceCaffe-Regular';

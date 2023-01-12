@@ -533,6 +533,7 @@ header .menu .item.current-menu-item>a {
 }
 .about_items {
     margin-top: 24px;
+    display: flex;
 }
 .about_item {
 }

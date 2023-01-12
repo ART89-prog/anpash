@@ -63,19 +63,90 @@ $(() => {
             clickable: true,
         },
         breakpoints: {
-          320: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },  
+          479: {
             slidesPerView: 1,
             spaceBetween: 20
           },
-          480: {
+          767: {
             slidesPerView: 2,
             spaceBetween: 30
           },
-          640: {
+          1023: {
             slidesPerView: 3,
             spaceBetween: 40
           }
         }
+      })
+
+
+
+      const swiper3 = new Swiper('.tour-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20
+              },  
+            479: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            1023: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            }          
+        }
+      })
+
+
+      const swiper4 = new Swiper('.school-slider', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20
+              },  
+            479: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            767: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            1023: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            }
+          }
       })
 
 

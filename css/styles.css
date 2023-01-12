@@ -656,15 +656,15 @@ header .menu .item.current-menu-item>a:after {
 
 
 
-.blog {
+.blog,
+.tour,
+.school {
     margin-bottom: 120px;
 }
-.blog-slider {
+.blog-slider,
+.tour-slider,
+.school-slider {
     overflow: hidden;
-}
-.blog {
-}
-.cont {
 }
 .block_head {
     margin-bottom: 49px;
@@ -672,18 +672,8 @@ header .menu .item.current-menu-item>a:after {
 .blog_title {
     text-align: center;
 }
-.title {
-}
 .blog_text {
     text-align: center;
-}
-.text {
-}
-.blog-slider {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }
 .blog_item-img {
     position: relative;
@@ -725,29 +715,18 @@ header .menu .item.current-menu-item>a:after {
     text-transform: uppercase;
     color: #8D5F1B;
     text-decoration: none;
-    width: 292px;
+    max-width: 292px;
     height: 70px;
     background: #FFD494;
     border-radius: 15px;
     display: block;
     margin: 34px auto 0;
 }
-
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.icon {
-}
-.swiper-button-next {
-}
-
-
 .blog .swiper-button-prev {
     width: 50px;
     height: 50px;
-    background: #000000;
-    opacity: 0.3;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
@@ -755,9 +734,125 @@ header .menu .item.current-menu-item>a:after {
 .blog .swiper-button-next {
     width: 50px;
     height: 50px;
-    background: #000000;
-    opacity: 0.3;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
+}
+.blog .swiper-button-prev .icon {
+    fill: #8D5F1B;
+}
+.blog .swiper-button-next .icon {
+    fill: #8D5F1B;
+}
+.blog .swiper-button-next.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.blog .swiper-button-next.swiper-button-disabled .icon {
+    fill: #fff;
+}
+.blog .swiper-button-prev.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.blog .swiper-button-prev.swiper-button-disabled .icon {
+    fill: #fff;
+}
+
+
+
+.tour .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
+    border-radius: 90px;
+    position: absolute;
+    top: 40%;
+}
+.tour .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
+    border-radius: 90px;
+    position: absolute;
+    top: 40%;
+}
+.tour .swiper-button-prev .icon {
+    fill: #8D5F1B;
+}
+.tour .swiper-button-next .icon {
+    fill: #8D5F1B;
+}
+.tour .swiper-button-next.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.tour .swiper-button-next.swiper-button-disabled .icon {
+    fill: #fff;
+}
+.tour .swiper-button-prev.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.tour .swiper-button-prev.swiper-button-disabled .icon {
+    fill: #fff;
+}
+
+
+
+.school .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
+    border-radius: 90px;
+    position: absolute;
+    top: 60%;
+}
+.school .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    opacity: 1;
+    border-radius: 90px;
+    position: absolute;
+    top: 60%;
+}
+.school .swiper-button-prev .icon {
+    fill: #8D5F1B;
+}
+.school .swiper-button-next .icon {
+    fill: #8D5F1B;
+}
+.school .swiper-button-next.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.school .swiper-button-next.swiper-button-disabled .icon {
+    fill: #fff;
+}
+.school .swiper-button-prev.swiper-button-disabled {
+    background: #C3C3C3;
+}
+.school .swiper-button-prev.swiper-button-disabled .icon {
+    fill: #fff;
+}
+
+.school .swiper-slide {
+    padding: 32px 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 32px rgba(25, 25, 28, 0.12);
+    border-radius: 15px;
+}
+.school_item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 137%;
+    color: #212121; 
+    margin-bottom: 10px;
+}
+.school_item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 144%;
+    color: #212121;
 }

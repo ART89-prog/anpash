@@ -119,7 +119,7 @@ $(() => {
 
       const swiper4 = new Swiper('.school-slider', {
         slidesPerView: 4,
-        spaceBetween: 10,
+        spaceBetween: 30,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
@@ -144,7 +144,7 @@ $(() => {
             },
             1023: {
               slidesPerView: 4,
-              spaceBetween: 40
+              spaceBetween: 30
             }
           }
       })

@@ -1,0 +1,26 @@
+@media print, (max-width: 1370px) {
+
+    .swiper-slider .swiper-button-prev {
+        left: 20px;
+        margin: 0;
+    }
+    .swiper-slider .swiper-button-next {
+        left: auto;
+        right: 20px;
+    }
+    .tour .swiper-button-prev {
+        /* top: calc(100% + 50px); */
+        margin-top: 25px;
+        left: calc(50% - 80px);    
+        position: relative;    
+    }
+    .tour .swiper-button-next {
+        /* top: calc(100% + 50px); */
+        margin-top: 25px;
+        left: calc(50% + 30px);   
+        position: relative;     
+    }
+
+
+}
+

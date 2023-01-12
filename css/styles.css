@@ -526,7 +526,9 @@ header .menu .item.current-menu-item>a:after {
     font-family: 'DolceCaffe-Regular';
     font-size: 70px;
     line-height: 82px;
-    color: #212121;
+    color: #212121;    
+}
+.about_title {
     margin-bottom: 24px;
 }
 .about_text {
@@ -650,4 +652,112 @@ header .menu .item.current-menu-item>a:after {
     color: #FFFFFF;
     max-width: 585px;
     width: 100%;
+}
+
+
+
+.blog {
+    margin-bottom: 120px;
+}
+.blog-slider {
+    overflow: hidden;
+}
+.blog {
+}
+.cont {
+}
+.block_head {
+    margin-bottom: 49px;
+}
+.blog_title {
+    text-align: center;
+}
+.title {
+}
+.blog_text {
+    text-align: center;
+}
+.text {
+}
+.blog-slider {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.blog_item-img {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65.26%;
+}
+.blog_item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.blog_item-title {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 137%;
+    text-align: center;
+    color: #212121;
+}
+.blog_item-text {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 163.5%;
+    text-align: center;
+    color: #212121;
+}
+.blog_item-link a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8D5F1B;
+    text-decoration: none;
+    width: 292px;
+    height: 70px;
+    background: #FFD494;
+    border-radius: 15px;
+    display: block;
+    margin: 34px auto 0;
+}
+
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.icon {
+}
+.swiper-button-next {
+}
+
+
+.blog .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    opacity: 0.3;
+    border-radius: 90px;
+    position: absolute;
+    top: 40%;
+}
+.blog .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    opacity: 0.3;
+    border-radius: 90px;
+    position: absolute;
+    top: 40%;
 }

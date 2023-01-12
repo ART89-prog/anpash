@@ -44,6 +44,22 @@ $(() => {
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true
+        }    
+      })
+
+
+
+      const swiper2 = new Swiper('.blog-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
             clickable: true,
         },
         breakpoints: {
@@ -52,11 +68,11 @@ $(() => {
             spaceBetween: 20
           },
           480: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 30
           },
           640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 40
           }
         }

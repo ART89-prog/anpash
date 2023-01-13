@@ -79,6 +79,14 @@
         line-height: 18px;
         margin-top: 13px;
     }
+    .tour-page {
+        padding-bottom: 30px;
+    }
+    .pagination a {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+    }
     
  
 

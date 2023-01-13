@@ -84,6 +84,28 @@
     .school .swiper-slide {
         padding: 15px;
     }
+
+    .tour_items {
+        margin-left: 0px;
+        margin-bottom: -20px;
+    }
+    .tour_items > * {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        padding: 15px 15px 25px;
+    }
+    .pagination a {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .tour-page {
+        padding-bottom: 40px;
+    }
+    .tour-page_title {
+        font-size: 26px;
+    }
     
 
 

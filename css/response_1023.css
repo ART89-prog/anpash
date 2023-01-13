@@ -211,6 +211,50 @@
     }
 
 
+    .tour-page_title {
+        font-size: 32px;
+    }
+    .tour-page_text p {
+        margin-bottom: 20px;
+    }
+    .tour-page_text {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    .tour-page_links {
+        margin-bottom: 25px;
+    }
+    .tour_items {
+        margin-left: -20px;
+        margin-bottom: -20px;
+    }
+    .tour_items > * {
+        width: calc(100%/2 - 20px);
+        margin-left: 20px;
+        margin-bottom: 20px;
+        padding: 15px 15px 25px;
+    }
+    .tour_item-tag {
+        margin-top: 15px;
+    }
+    .tour_item-title {
+        font-size: 18px;
+    }
+    .tour_item-link {
+        line-height: 50px;
+        height: 50px;
+        margin: 15px auto 0;
+    }
+    .pagination {
+        margin-top: 40px;
+    }
+    .tour-page {
+        padding-bottom: 60px;
+    }
+    .breadcrumbs {
+        margin-bottom: 40px;
+    }
+
 
     
 

@@ -67,6 +67,17 @@
         width: 400px;
         height: 400px;
     }
+    .about-page.school-page .about_text img {
+        width: 400px;
+        height: 248px;
+    }
+    .about-page.school-page .about_text img.fl {
+        width: 400px;
+        height: 248px;  
+    }
+    .post {
+        padding-bottom: 80px;
+    }
 
 
 

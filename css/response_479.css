@@ -126,6 +126,17 @@
         padding-bottom: 30px;
         margin-bottom: 30px;
     }
+    .about-page.school-page .about_text img {
+       width: 100%;
+       height: auto;
+    }
+    .about-page.school-page .about_text img.fl {
+        width: 100%;
+        height: auto;
+    }
+    .post {
+        padding-bottom: 30px;
+    }
  
 
    

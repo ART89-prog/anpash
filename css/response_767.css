@@ -150,6 +150,17 @@
         margin: 0 auto 20px;
         display: block;
     }
+    .about-page.school-page .about_text img {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .about-page.school-page .about_text img.fl {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .post {
+        padding-bottom: 40px;
+    }
 
 
 

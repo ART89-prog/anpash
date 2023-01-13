@@ -82,6 +82,9 @@
     .tour-page {
         padding-bottom: 30px;
     }
+    .tour-page_title {
+        font-size: 22px;
+    }
     .pagination a {
         width: 30px;
         height: 30px;

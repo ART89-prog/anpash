@@ -255,6 +255,46 @@
         margin-bottom: 40px;
     }
 
+    .blog-page_left-title, 
+    .blog-page_right-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .blog-page .blog_item-imgs {
+        width: 210px;
+        height: 150px;
+    }
+    .blog-page .tour_item-info {
+        width: calc(100% - 225px);
+    }
+    .blog-page_right {
+        width: 190px;
+    }
+    .blog-page_tag {
+        padding: 15px 10px;
+    }
+    .blog-page_left {
+        width: calc(100% - 210px);
+    }
+    .blog-page {
+        padding-bottom: 60px;
+    }
+
+    .photo_item-title {
+        font-size: 16px;
+        bottom: 15px;
+        left: 15px;
+    }
+    .photo_items {
+        margin-left: -20px;
+        margin-bottom: 20px;
+    }
+    .photo_items > * {
+        width: calc(100%/2 - 20px);
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
 
     
 

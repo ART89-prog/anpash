@@ -88,6 +88,24 @@
         border-radius: 6px;
     }
     
+    .blog-page .tour_item {
+        flex-direction: column;
+    }
+    .blog-page .blog_item-imgs {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .blog-page .tour_item-info {
+        width: 100%;
+    }
+    .blog-page {
+        padding-bottom: 30px;
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
  
 
    

@@ -989,7 +989,16 @@ footer {
 
 
 .inside-page header .menu .item > a {
-    color: var(--text_color);
+    color: var(--text_color);padding: 10px 20px;
+
+}
+.inside-page header .menu .item > a:hover {
+    color: #fff;
+    background: #212121;
+}
+.inside-page header .menu .item {
+    margin-right: 0;
+    
 }
 .inside-page .header_links a:nth-child(1) .icon {
     width: 20px;

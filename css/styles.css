@@ -605,7 +605,7 @@ header .menu .item.current-menu-item>a:after {
 
 
 
-.swiper-slider {
+.slider-big {
     margin-bottom: 118px;
     position: relative;
 }
@@ -1505,4 +1505,23 @@ footer {
 }
 .post .tour-page_title {
     padding-top: 0;
+}
+
+.photogallery_date {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 137%;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 54px;
+}
+.photogallery .tour-page_text {
+    margin-bottom: 34px;
+}
+
+
+.post-page .slider-big {
+    margin-left: -510px;
+    margin-right: -510px;
+    margin-bottom: 60px;
 }

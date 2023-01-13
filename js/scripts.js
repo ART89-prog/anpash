@@ -34,7 +34,7 @@ $(() => {
 	})
 
 
-    const swiper = new Swiper('.swiper-slider', {
+    const swiper = new Swiper('.slider-big', {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {

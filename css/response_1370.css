@@ -1,10 +1,10 @@
 @media print, (max-width: 1370px) {
 
-    .swiper-slider .swiper-button-prev {
+    .slider-big .swiper-button-prev {
         left: 30px;
         margin: 0;
     }
-    .swiper-slider .swiper-button-next {
+    .slider-big .swiper-button-next {
         left: auto;
         right: 30px;
     }

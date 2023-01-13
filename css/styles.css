@@ -985,3 +985,45 @@ footer {
     display: block;
     margin-top: 15px;
 }
+
+
+
+.inside-page header .menu .item > a {
+    color: var(--text_color);
+}
+.inside-page .header_links a:nth-child(1) .icon {
+    width: 20px;
+    height: 18px;
+    fill: #212121;
+}
+.inside-page .header_links a:nth-child(2) .icon {
+    width: 19px;
+    height: 12px;
+    fill: #212121;
+}
+.inside-page .header_links a:nth-child(3) .icon {
+    width: 18px;
+    height: 18px;
+    fill: #212121;
+}
+.inside-page .header_links a:nth-child(4) .icon {
+    width: 10px;
+    height: 18px;
+    fill: #212121;
+}
+.inside-page .header_links a:nth-child(5) .icon {
+    width: 20px;
+    height: 14px;
+    fill: #212121;
+}
+.inside-page .header_links a {
+    border: 1px solid var(--text_color);
+}
+.inside-page header {
+    background: none;
+    padding-top: 33px;
+    padding-bottom: 31px;
+}
+.header_top {
+    margin-bottom: 20px;
+}

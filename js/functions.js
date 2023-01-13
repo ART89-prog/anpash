@@ -48,16 +48,6 @@ $(() => {
 	})
 
 
-	$(window).scroll(function(){
-		// Кнопка 'Вверх'
-		if( $(window).scrollTop() > $(window).innerHeight() ) {
-			$('.buttonUp').fadeIn(300)
-		} else {
-			$('.buttonUp').fadeOut(200)
-		}
-	})
-
-
 
 	// Табы
 	var locationHash = window.location.hash

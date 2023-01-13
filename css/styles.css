@@ -989,15 +989,16 @@ footer {
 
 
 .inside-page header .menu .item > a {
-    color: var(--text_color);padding: 10px 20px;
-
+    color: var(--text_color);
+    padding: 10px 10px;
+    margin-right: 10px;
 }
 .inside-page header .menu .item > a:hover {
     color: #fff;
     background: #212121;
 }
 .inside-page header .menu .item {
-    margin-right: 0;
+    margin-right: 4px;
     
 }
 .inside-page .header_links a:nth-child(1) .icon {
@@ -1025,14 +1026,100 @@ footer {
     height: 14px;
     fill: #212121;
 }
-.inside-page .header_links a {
-    border: 1px solid var(--text_color);
+.inside-page header .menu .item > a.active {
+    color: #fff;
+    background: #212121;
 }
 .inside-page header {
     background: none;
     padding-top: 33px;
     padding-bottom: 31px;
 }
-.header_top {
-    margin-bottom: 20px;
+.inside-page header .menu .item > a:after {
+    display: none;
+}
+.inside-page .header_links a {
+    border: 1px solid #000;
+}
+.inside-page .header_top {
+    margin-bottom: 0;
+}
+
+
+.tour-page {
+}
+.cont {
+}
+.breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #212121;
+}
+.breadcrumbs a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #212121;
+    text-decoration: none;
+}
+.sep {
+}
+.current {
+}
+.tour-page_title {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;    
+    color: #212121;  
+    padding-top: 34px; 
+    margin-bottom: 21px;
+    position: relative;
+}
+.tour-page_title:before {
+    position: absolute;
+    content: "";
+    width: 182px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -21px;
+    background: #FFD494;
+}
+.tour-page_title:after {
+    position: absolute;
+    content: "";
+    width: 82px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -34px;
+    background: #FFD494;
+}
+.tour-page_text {
+}
+.tour-page_links {
+}
+.tour_items {
+}
+.tour_item {
+}
+.tour_item-img {
+}
+.tour_item-tag {
+}
+.tour_item-title {
+}
+.tour_item-text {
+}
+.blog_item-link {
+}
+.pagination {
+}
+.active {
 }

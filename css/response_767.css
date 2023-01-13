@@ -209,13 +209,15 @@
     .about {
         padding-bottom: 40px;
     }
-    .swiper-slider,
-    .blog, 
-    .tour {
+    .swiper-slider {
         margin-bottom: 40px;
     }
+    .blog, 
+    .tour {
+        margin-bottom: 100px;
+    }
     .school {
-        padding: 40px 0 40px;
+        padding: 40px 0 80px;
     }
     .school .swiper-slide {
         padding: 15px;

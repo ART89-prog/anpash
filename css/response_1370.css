@@ -1,24 +1,36 @@
 @media print, (max-width: 1370px) {
 
     .swiper-slider .swiper-button-prev {
-        left: 20px;
+        left: 30px;
         margin: 0;
     }
     .swiper-slider .swiper-button-next {
         left: auto;
-        right: 20px;
+        right: 30px;
     }
-    .tour .swiper-button-prev {
-        /* top: calc(100% + 50px); */
-        margin-top: 25px;
-        left: calc(50% - 80px);    
-        position: relative;    
+    .school .swiper-button-prev4 {
+        top: calc(100% + 20px);
+        left: calc(50% - 80px);  
     }
-    .tour .swiper-button-next {
-        /* top: calc(100% + 50px); */
-        margin-top: 25px;
-        left: calc(50% + 30px);   
-        position: relative;     
+    .school .swiper-button-next4 {
+        top: calc(100% + 20px);
+        left: calc(50% + 30px); 
+    }
+    .tour .swiper-button-prev3 {
+        top: calc(100% + 40px);
+        left: calc(50% - 80px);  
+    }
+    .tour .swiper-button-next3 {
+        top: calc(100% + 40px);
+        left: calc(50% + 30px); 
+    }
+    .blog .swiper-button-prev2 {
+        top: calc(100% + 50px);
+        left: calc(50% - 80px);  
+    }
+    .blog .swiper-button-next2 {
+        top: calc(100% + 50px);
+        left: calc(50% + 30px); 
     }
 
 

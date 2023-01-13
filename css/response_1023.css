@@ -60,13 +60,15 @@
     .about {
         padding-bottom: 60px;
     }
-    .swiper-slider,
-    .blog, 
-    .tour {
+    .swiper-slider {
         margin-bottom: 60px;
     }
+    .blog, 
+    .tour {
+        margin-bottom: 100px;
+    }
     .school {
-        padding: 60px 0 60px;
+        padding: 60px 0 80px;
     }
 
 

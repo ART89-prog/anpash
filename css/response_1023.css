@@ -295,6 +295,29 @@
         margin-bottom: 20px;
     }
 
+    .about-page .about_text img {
+        width: 300px;
+        height: 300px;
+    }
+    .about-page .about_text.fl img {
+        width: 300px;
+        height: 300px;
+    }
+    .about-page .about_text p {
+        margin-bottom: 20px;
+    }
+    .about-page .tour-page_title {
+        margin-bottom: 30px;
+    }
+    .about-page {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+    .about-page .about_items {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
 
     
 

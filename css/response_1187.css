@@ -59,6 +59,15 @@
         margin-bottom: 40px;
     }
 
+    .about-page .about_text img {
+        width: 400px;
+        height: 400px;
+    }
+    .about-page .about_text.fl img {
+        width: 400px;
+        height: 400px;
+    }
+
 
 
 

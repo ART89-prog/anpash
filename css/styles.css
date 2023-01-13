@@ -1397,3 +1397,45 @@ footer {
 .photo_item:hover .photo_item-date {
     display: block;
 }
+
+.about-page {
+    padding-bottom: 120px;
+    background: #F6F6F6;
+    margin-bottom: 93px;
+}
+.about-page .about_text img {
+    float: right;
+    flex-shrink: 0;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 585px;
+    height: 585px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.about-page .about_text p {
+    margin-bottom: 32px;
+}
+.about-page .about_text p:last-child {
+    margin-bottom: 0px;
+}
+.about-page .tour-page_title {
+    margin-bottom: 56px;
+}
+.about-page .about_items {
+    justify-content: space-around;
+    padding: 35px;
+    margin-bottom: 77px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+.about-page .about_text.fl img {
+    float: left;
+    flex-shrink: 0;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    width: 585px;
+    height: 585px;
+    border-radius: 15px;
+    object-fit: cover;
+}

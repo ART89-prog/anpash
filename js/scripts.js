@@ -151,6 +151,188 @@ $(() => {
 
 
 
+
+      const materialsSliders = [],
+      materials = document.querySelectorAll('.materials-slider')
+  
+      materials.forEach(function (el, i) {
+      el.classList.add('materials_s' + i)
+  
+      let options = {
+        loop: false,
+        speed: 500,
+        watchSlidesProgress: true,
+        slideActiveClass: 'active',
+        slideVisibleClass: 'visible',
+        navigation: {
+          nextEl: '.swiper-button-next6',
+          prevEl: '.swiper-button-prev6'
+        },
+        preloadImages: false,
+        lazy: {
+          enabled: true,
+          checkInView: true,
+          loadOnTransitionStart: true,
+          loadPrevNext: true
+        },
+        breakpoints: {
+          0: {
+            spaceBetween: 20,
+            slidesPerView: 1
+          },
+          480: {
+            spaceBetween: 24,
+            slidesPerView: 2
+          },
+          768: {
+            spaceBetween: 24,
+            slidesPerView: 3
+          },
+          1280: {
+            spaceBetween: 30,
+            slidesPerView: 3
+          }
+        },
+        on: {
+          init: swiper => {
+            setTimeout(() => setHeight($(swiper.$el).find('.materials .blog_item')))
+          },
+          resize: swiper => {
+            setTimeout(() => {
+              $(swiper.$el).find('.materials .blog_item').height('auto')
+              setHeight($(swiper.$el).find('.materials .blog_item'))
+            })
+          }
+        }
+      }
+  
+      materialsSliders.push(new Swiper('.materials_s' + i, options))
+    })
+
+
+
+
+
+    const littleSliders = [],
+    little = document.querySelectorAll('.slider-little')
+
+    little.forEach(function (el, i) {
+    el.classList.add('little_s' + i)
+
+    let options = {
+      loop: false,
+      speed: 500,
+      watchSlidesProgress: true,
+      slideActiveClass: 'active',
+      slideVisibleClass: 'visible',
+      navigation: {
+        nextEl: '.swiper-button-next7',
+        prevEl: '.swiper-button-prev7'
+      },
+      preloadImages: false,
+      lazy: {
+        enabled: true,
+        checkInView: true,
+        loadOnTransitionStart: true,
+        loadPrevNext: true
+      },
+      breakpoints: {
+        0: {
+          spaceBetween: 0,
+          slidesPerView: 'auto'
+        },
+        480: {
+          spaceBetween: 0,
+          slidesPerView: 'auto'
+        },
+        768: {
+          spaceBetween: 0,
+          slidesPerView: 1
+        },
+        1280: {
+          spaceBetween: 0,
+          slidesPerView: 1
+        }
+      },
+      on: {
+        init: swiper => {
+          setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
+        },
+        resize: swiper => {
+          setTimeout(() => {
+            $(swiper.$el).find('.swiper-slide').height('auto')
+            setHeight($(swiper.$el).find('.swiper-slide'))
+          })
+        }
+      }
+    }
+
+    littleSliders.push(new Swiper('.little_s' + i, options))
+  })
+
+
+
+  const little2Sliders = [],
+  little2 = document.querySelectorAll('.slider-little2')
+
+  little2.forEach(function (el, i) {
+  el.classList.add('little2_s' + i)
+
+  let options = {
+    loop: false,
+    speed: 500,
+    watchSlidesProgress: true,
+    slideActiveClass: 'active',
+    slideVisibleClass: 'visible',
+    navigation: {
+      nextEl: '.swiper-button-next8',
+      prevEl: '.swiper-button-prev8'
+    },
+    preloadImages: false,
+    lazy: {
+      enabled: true,
+      checkInView: true,
+      loadOnTransitionStart: true,
+      loadPrevNext: true
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 0,
+        slidesPerView: 'auto'
+      },
+      480: {
+        spaceBetween: 0,
+        slidesPerView: 'auto'
+      },
+      768: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      },
+      1280: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      }
+    },
+    on: {
+      init: swiper => {
+        setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
+      },
+      resize: swiper => {
+        setTimeout(() => {
+          $(swiper.$el).find('.swiper-slide').height('auto')
+          setHeight($(swiper.$el).find('.swiper-slide'))
+        })
+      }
+    }
+  }
+
+  little2Sliders.push(new Swiper('.little2_s' + i, options))
+})
+
+
+
+    
+
     $(document).on('change', '.error', function () {
 
         $(this).removeClass('error');

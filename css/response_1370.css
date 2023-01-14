@@ -32,6 +32,14 @@
         top: calc(100% + 50px);
         left: calc(50% + 30px); 
     }
+    .swiper-button-prev6 {
+        top: calc(100% + 40px);
+        left: calc(50% - 80px);  
+    }
+    .swiper-button-next6 {
+        top: calc(100% + 40px);
+        left: calc(50% + 30px); 
+    }
 
 
 }

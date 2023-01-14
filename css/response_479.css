@@ -51,7 +51,7 @@
     .blog_item-link a {
         line-height: 50px;
         max-width: 100%;
-        height: 50px;
+        min-height: 50px;
         border-radius: 10px;
     }
     .block_head {

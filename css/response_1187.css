@@ -78,6 +78,9 @@
     .post {
         padding-bottom: 80px;
     }
+    .post-page .text_block {
+        font-size: var(--font_size);
+    }
 
 
 

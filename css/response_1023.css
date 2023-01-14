@@ -150,7 +150,8 @@
         font-size: 15px;
     }
     header .menu .item {
-        margin-right: 17px;
+        margin-right: 0px;
+        margin-bottom: 17px;
     }
     .header_bottom-title {
         font-size: 58px;
@@ -340,6 +341,45 @@
     }
     .post {
         padding-bottom: 60px;
+    }
+
+
+    .post-page_author {
+        margin-bottom: 20px;
+    }
+    .post-page .tour-page_title {
+        margin-bottom: 20px;
+    }
+    .post-page .slider-big {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 20px;
+    }
+    .post-page .text_block p {
+        margin-bottom: 15px;
+    }
+    .post-page .slider-little {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .post-page .text_block img {
+        margin: 20px auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .slider-little2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .materials {
+        padding-top: 50px;
+    }
+    .swiper-slide span {
+        line-height: 1.5;
+    }
+    .post-page_author {
+        font-size: var(--font_size);
     }
 
 

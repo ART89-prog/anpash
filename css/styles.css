@@ -1117,7 +1117,18 @@ footer {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #EAEAEA;
-    margin-bottom: 35px;          
+    margin-bottom: 35px; 
+    white-space: nowrap;
+    overflow: auto;         
+}
+.tour-page_links::-webkit-scrollbar { 
+    width: 0; 
+}
+.tour-page_links { 
+    -ms-overflow-style: none; 
+}
+.tour-page_links { 
+    overflow: -moz-scrollbars-none; 
 }
 .tour-page_links li a {
     list-style: none;
@@ -1215,7 +1226,7 @@ footer {
     text-transform: uppercase;
     color: #8D5F1B;
     text-decoration: none;
-    height: 70px;
+    min-height: 70px;
     background: #FFD494;
     border-radius: 15px;
     display: block;

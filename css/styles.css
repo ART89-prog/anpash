@@ -1,56 +1,68 @@
 /* For old browsers */
-@supports (not(--css: variables)) {
-    .supports_error {
+@supports (not(--css: variables))
+{
+    .supports_error
+    {
         display: flex !important;
     }
 }
 
 /* For IE */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .supports_error {
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none)
+{
+    .supports_error
+    {
         display: flex !important;
     }
 }
-
-
 
 
 
 /*------------------
     Reset styles
 ------------------*/
-* {
+*
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    scroll-margin-top: 88px;
 }
 
 *:before,
-*:after {
+*:after
+{
     box-sizing: border-box;
 }
 
-html {
+html
+{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -ms-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 
-body {
+body
+{
     margin: 0;
 
+    overscroll-behavior: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-overflow-scrolling: touch;
     text-rendering: optimizeLegibility;
     text-decoration-skip: objects;
 }
 
-img {
+img
+{
     border-style: none;
 }
 
-textarea {
+textarea
+{
     overflow: auto;
 }
 
@@ -58,42 +70,48 @@ input,
 textarea,
 input:active,
 textarea:active,
-button {
+button
+{
     margin: 0;
 
     -webkit-border-radius: 0;
-    border-radius: 0;
-    outline: none transparent !important;
+            border-radius: 0;
+         outline: none transparent !important;
     box-shadow: none;
 
     -webkit-appearance: none;
-    appearance: none;
+            appearance: none;
     -moz-outline: none !important;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button
+{
     margin: 0;
 
     -webkit-appearance: none;
 }
 
-input[type=number] {
+input[type=number]
+{
     -moz-appearance: textfield;
 }
 
-:focus {
+:focus
+{
     outline: 0;
 }
 
 :hover,
-:active {
+:active
+{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
 }
 
 
-::-ms-clear {
+::-ms-clear
+{
     display: none;
 }
 

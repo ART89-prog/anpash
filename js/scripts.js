@@ -1,5 +1,10 @@
 $(() => {
 
+
+    	// Ширина окна для ресайза
+	    WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+
+
     // Моб. меню
     $('header .mob_menu_btn').click((e) => {
         e.preventDefault()
@@ -333,64 +338,58 @@ $(() => {
 
     
 
-    $(document).on('change', '.error', function () {
+$(window).on('resize', () => {
+	let windowW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
 
-        $(this).removeClass('error');
-        if ($(this).attr('class') != 'checked') { $(this).next().hide(); }
-    })
+	if (typeof WW !== 'undefined' && WW != windowW) {
+		// Моб. версия
+		if (!firstResize) {
+			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
 
-    $(document).on('click', '.submit_btn', function (event) {
-        event.preventDefault();
-        var dataForAjax = "action=form&";
-        var addressForAjax = myajax.url;
-        var valid = true;
-        var form = $(this).closest('form');
-        $(this).closest('form').find('input:not([type=submit]),textarea').each(function (i, elem) {
-            if (this.value.length < 3 && $(this).hasClass('required')) {
-                valid = false;
-                $(this).addClass('error');
-                $(this).next().show();
-            }
-            if ($(this).attr('name') == 'email' && $(this).hasClass('required')) {
-                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-                if (!pattern.test($(this).val())) {
-                    valid = false;
-                    $(this).addClass('error');
-                    $(this).next().show();
-                }
-            }
-            if ($(this).hasClass("checked") && !$(this).prop("checked")) {
-                $(this).addClass('error');
-                valid = false;
-            }
+			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 
-            if (i > 0) {
-                dataForAjax += '&';
-            }
-            dataForAjax += this.name + '=' + this.value;
-        })
+			firstResize = true
+		} else {
+			firstResize = false
+		}
 
-        if (!valid) {
-            return false;
-        }
 
-        $.ajax({
-            type: 'POST',
-            data: dataForAjax,
-            url: addressForAjax,
-            success: function (response) {
+		// Фикс. шапка
+		headerInit = false
+		$('.header_wrap').height('auto')
 
-                Fancybox.close()
+		setTimeout(() => {
+			headerInit = true
+			headerHeight = $('header').outerHeight()
 
-                Fancybox.show([{
-                    src: "#thanks",
-                    type: 'inline'
-                }])
+			$('.header_wrap').height(headerHeight)
 
-                $('form').trigger("reset");
-            }
-        });
-    });
+			headerInit && $(window).scrollTop() > headerHeight
+				? $('header').addClass('fixed')
+				: $('header').removeClass('fixed')
+		}, 100)
+
+
+		// Фикс. моб. шапка
+		mobHeaderInit = false
+		$('.mob_header_wrap').height('auto')
+
+		setTimeout(() => {
+			mobHeaderInit = true
+			mobHeaderHeight = $('.mob_header').outerHeight()
+
+			$('.mob_header_wrap').height(mobHeaderHeight)
+
+			mobHeaderInit && $(window).scrollTop() > 0
+				? $('.mob_header').addClass('fixed')
+				: $('.mob_header').removeClass('fixed')
+		}, 100)
+
+
+		// Перезапись ширины окна
+		WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+	}
+})
 
 
 })

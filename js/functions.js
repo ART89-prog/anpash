@@ -1,92 +1,57 @@
-$(() => {
+document.addEventListener("DOMContentLoaded", function () {
 	// Есть ли поддержка тач событий или это apple устройство
-	if (!is_touch_device() || !/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) $('html').addClass('custom_scroll')
+	if (!is_touch_device() || !/(Mac|iPhone|iPod|MacIntel|iPad)/i.test(navigator.platform)) document.documentElement.classList.add('custom_scroll')
 
 
 	// Ленивая загрузка
-	setTimeout(() => {
-		observer = lozad('.lozad', {
-			rootMargin: '200px 0px',
-			threshold: 0,
-			loaded: (el) => el.classList.add('loaded')
-		})
+	const boxes = document.querySelectorAll('.lazyload')
 
-		observer.observe()
-	}, 200)
+	function scrollTracking(entries) {
+		for (const entry of entries) {
+			if (entry.intersectionRatio >= 0.2 && !entry.target.classList.contains('loaded')) {
+				entry.target.src = entry.target.getAttribute('data-src')
+				entry.target.classList.add('loaded')
+			}
+		}
+	}
+
+	const observer = new IntersectionObserver(scrollTracking, {
+		threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+	})
+
+	boxes.forEach(element => observer.observe(element))
 
 
 	// Установка ширины стандартного скроллбара
-	$(':root').css('--scroll_width', widthScroll() + 'px')
-
-
-	// Маска ввода
-	$('input[type=tel]').inputmask('+7 (999) 999-99-99')
-
-
-
-
-
-
-	Fancybox
-	Fancybox.defaults.autoFocus = false
-	Fancybox.defaults.dragToClose = false
-	Fancybox.defaults.l10n = {
-		CLOSE: "Закрыть",
-		NEXT: "Следующий",
-		PREV: "Предыдущий",
-		MODAL: "Вы можете закрыть это модальное окно нажав клавишу ESC"
-	}
+	document.documentElement.style.setProperty('--scroll_width', widthScroll() + 'px')
 
 
 	// Моб. версия
-	fiestResize = false
+	firstResize = false
 
-	if ($(window).width() < 360) {
-		$('meta[name=viewport]').attr('content', 'width=360, user-scalable=no')
+	if (document.body.clientWidth < 375) {
+		document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 
-		fiestResize = true
-	}
-
-
-	if (is_touch_device()) {
-		// Закрытие моб. меню свайпом справо на лево
-		let ts
-
-		$('body').on('touchstart', (e) => { ts = e.originalEvent.touches[0].clientX })
-
-		$('body').on('touchend', (e) => {
-			let te = e.originalEvent.changedTouches[0].clientX
-
-			if ($('body').hasClass('menu_open') && ts > te + 50) {
-				// Свайп справо на лево
-				$('header .mob_menu_btn').removeClass('active')
-				$('body').removeClass('menu_open')
-				$('header .menu').removeClass('show')
-				$('.overlay').fadeOut(300)
-			} else if (ts < te - 50) {
-				// Свайп слева на право
-			}
-		})
-	}
-})
-
-
-
-$(window).resize(() => {
-	// Моб. версия
-	if (!fiestResize) {
-		$('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1, maximum-scale=1')
-		if ($(window).width() < 360) $('meta[name=viewport]').attr('content', 'width=360, user-scalable=no')
-
-		fiestResize = true
-	} else {
-		fiestResize = false
+		firstResize = true
 	}
 })
 
 
 
 // Вспомогательные функции
+const setHeight = className => {
+	let maxheight = 0
+
+	className.each(function () {
+		let elHeight = $(this).outerHeight()
+
+		if (elHeight > maxheight) maxheight = elHeight
+	})
+
+	className.outerHeight(maxheight)
+}
+
+
 const is_touch_device = () => !!('ontouchstart' in window)
 
 

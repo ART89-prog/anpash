@@ -705,11 +705,6 @@ header .menu .item.current-menu-item>a:after {
 .tour {
     margin-bottom: 120px;
 }
-.blog-slider,
-.tour-slider,
-.school-slider {
-    overflow: hidden;
-}
 .block_head {
     margin-bottom: 55px;
 }
@@ -1600,9 +1595,6 @@ footer {
 .materials {
     padding-top: 93px;
 }
-.materials-slider {
-    overflow: hidden;
-}
 .swiper-button-prev6 {
     width: 50px;
     height: 50px;
@@ -1644,10 +1636,7 @@ footer {
     fill: #fff;
 }
 
-.slider-little {
-    overflow: hidden;
-    position: relative;
-}
+
 .swiper-button-prev7 {
     width: 50px;
     height: 50px;
@@ -1710,7 +1699,6 @@ footer {
 
 
 .slider-little2 {
-    overflow: hidden;
     position: relative;
     margin-bottom: 60px;
     margin-top: 60px;
@@ -1772,3 +1760,47 @@ footer {
 .slider-little2 .swiper-slide span {
     bottom: 13px;
 }
+
+.swiper-slide.visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.blog-slider .swiper-slide.visible,
+.tour-slider .swiper-slide.visible,
+.school-slider .swiper-slide.visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+.blog-slider .swiper-slide,
+.tour-slider .swiper-slide,
+.school-slider .swiper-slide,
+.slider-little .swiper-slide,
+.slider-little2 .swiper-slide,
+.materials-slider .swiper-slide {
+    position: relative;
+    visibility: hidden;
+    width: auto;
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+    opacity: 0;
+}
+.blog-slider .swiper-slide.visible,
+.tour-slider .swiper-slide.visible,
+.school-slider .swiper-slide.visible,
+.slider-little .swiper-slide.visible,
+.slider-little2 .swiper-slide.visible,
+.materials-slider .swiper-slide.visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+

@@ -170,6 +170,10 @@
     }
     header {
         padding-bottom: 225px;
+        height: 700px;
+    }
+    #scene div {
+        bottom: 0px !important;
     }
 
     .about_img {
@@ -182,7 +186,7 @@
     .text p {
         margin-bottom: 10px;
     }
-    .about_item-col {
+    .about_item-top {
         font-size: 30px;
     }
     .about_item-text {

@@ -2,7 +2,7 @@
 
     :root {
         --font_size: 15px;
-        --font_size_title: 30px;
+        --font_size_title: 36px;
     }
    
 
@@ -31,7 +31,7 @@
         height: 400px;
         margin: 0 auto;
     }
-    .about_item-col {
+    .about_item-top {
         font-size: 24px;
     }
     .about_item-text {
@@ -163,6 +163,17 @@
     }
     .tour-page_text {
         margin-bottom: 30px;
+    }
+    header {
+        height: 547px;
+    }
+    .about_title {
+        text-align: center;
+    }
+    .about_items {
+        justify-content: space-around;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 
 

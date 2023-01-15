@@ -2,7 +2,7 @@
 
     :root {
         --font_size: 14px;
-        --font_size_title: 26px;
+        --font_size_title: 32px;
     }
     .header_bottom-title {
         font-size: 28px;
@@ -22,11 +22,11 @@
         font-size: 14px;
         line-height: 22px;
     }
-    .about_item-col {
+    .about_item-top {
         font-size: 20px;
     }
     .about_item {
-        margin-right: 45px;
+        margin-right: 30px;
     }
     .about_img {
         width: 100%;
@@ -140,6 +140,14 @@
     .post {
         padding-bottom: 30px;
     }
+
+    header {
+        height: 500px;
+    }
+    #scene div {
+        bottom: 30px !important;
+    }
+ 
  
 
    

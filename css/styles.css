@@ -374,16 +374,7 @@ header {
     padding-top: 51px;
     padding-bottom: 588px;
     position: relative;
-}
-header::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 500px;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url(../images/header_bg2.png);
+    height: 1100px;
 }
 .header_top {
     display: flex;
@@ -596,12 +587,6 @@ header .menu .item.current-menu-item>a:after {
 .about_item {
     margin-right: 60px;
 }
-.about_item-col {
-    font-weight: 600;
-    font-size: 42px;
-    line-height: 150%;
-    color: var(--text_color); 
-}
 .about_item-text {
     font-weight: 400;
     font-size: 18px;
@@ -618,7 +603,14 @@ header .menu .item.current-menu-item>a:after {
     object-fit: cover;
     border-radius: 15px;
 }
-
+.about_item-top {
+    display: flex;
+    align-items: center;    
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 150%;
+    color: var(--text_color); 
+}
 
 
 
@@ -711,6 +703,9 @@ header .menu .item.current-menu-item>a:after {
 .blog_title {
     text-align: center;
 }
+.blog_item {
+    text-decoration: none;
+}
 .blog_text {
     text-align: center;
     margin-top: 8px;
@@ -737,6 +732,10 @@ header .menu .item.current-menu-item>a:after {
     line-height: 137%;
     text-align: center;
     color: var(--text_color); 
+    transition: all .3s;
+}
+.blog_item:hover .blog_item-title {
+    color: #F3C98A;
 }
 .blog_item-text {
     margin-top: 16px;
@@ -746,7 +745,7 @@ header .menu .item.current-menu-item>a:after {
     text-align: center;
     color: var(--text_color); 
 }
-.blog_item-link a {
+.blog_item-link {
     font-weight: 700;
     font-size: 14px;
     line-height: 70px;
@@ -761,6 +760,10 @@ header .menu .item.current-menu-item>a:after {
     border-radius: 15px;
     display: block;
     margin: 40px auto 0;
+    transition: all .4s;
+}
+.blog_item-link:hover {
+    background: #ffb547;
 }
 .blog .swiper-button-prev2 {
     width: 50px;
@@ -886,12 +889,19 @@ header .menu .item.current-menu-item>a:after {
     box-shadow: 0px 8px 32px rgba(25, 25, 28, 0.12);
     border-radius: 15px;
 }
+.school_item {
+    text-decoration: none;      
+}
 .school_item-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 137%;
     color: var(--text_color); 
     margin-bottom: 10px;
+    transition: all .3s;  
+}
+.school_item:hover .school_item-title {
+    color: #F3C98A;
 }
 .school_item-text {
     font-weight: 400;
@@ -1000,7 +1010,9 @@ footer {
 }
 
 
-
+.inside-page header {
+    height: 100px;
+}
 .inside-page header .menu .item > a {
     color: var(--text_color);
     padding: 10px 10px;
@@ -1814,6 +1826,16 @@ footer {
 }
 
 
+#scene div{ 
+    position: relative;
+    width: 5760px;
+    height: 500px;
+    bottom: -90px !important;
+    top:inherit !important;
+    left: -1920px !important;
+    transform: translateX(-50%);
+    background: url(../images/header_bg3.png);
+}
 
 
 

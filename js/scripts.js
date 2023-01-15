@@ -64,9 +64,10 @@ $(() => {
 
   
 // init Masonry
+if (typeof grid !== 'undefined' )
 var grid = document.querySelector('.grid');
 
-var msnry = new Masonry( grid, {
+var msnry = new Masonry(grid, {
   columnWidth: '.grid-sizer',
   itemSelector: '.grid-item',
   gutter: 30,

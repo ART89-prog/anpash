@@ -1,10 +1,5 @@
 $(() => {
 
-
-    	// Ширина окна для ресайза
-	    WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
-
-
     // Моб. меню
     $('header .mob_menu_btn').click((e) => {
         e.preventDefault()
@@ -39,252 +34,123 @@ $(() => {
 	})
 
 
-
-
-  // Большой слайдер
-
-  const bigSliders = [],
-  big = document.querySelectorAll('.slider-big')
-
-  big.forEach(function (el, i) {
-  el.classList.add('big_s' + i)
-
-  let options = {
-    loop: false,
-    speed: 500,
-    watchSlidesProgress: true,
-    slideActiveClass: 'active',
-    slideVisibleClass: 'visible',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    preloadImages: false,
-    lazy: {
-      enabled: true,
-      checkInView: true,
-      loadOnTransitionStart: true,
-      loadPrevNext: true
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      480: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      768: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      1280: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      }
-    },
-    on: {
-      init: swiper => {
-        setTimeout(() => setHeight($(swiper.$el).find('.slider-big')))
-      },
-      resize: swiper => {
-        setTimeout(() => {
-          $(swiper.$el).find('.slider-big').height('auto')
-          setHeight($(swiper.$el).find('.slider-big'))
-        })
-      }
-    }
-  }
-
-  bigSliders.push(new Swiper('.big_s' + i, options))
-})
-
-
-
-      // Блог слайдер
-
-      const blogSliders = [],
-      blog = document.querySelectorAll('.blog-slider')
-  
-      blog.forEach(function (el, i) {
-      el.classList.add('blog_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
+    const swiper = new Swiper('.slider-big', {
+        slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
-          nextEl: '.swiper-button-next2',
-          prevEl: '.swiper-button-prev2'
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
         },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        }    
+      })
+
+
+
+      const swiper2 = new Swiper('.blog-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next2',
+            prevEl: '.swiper-button-prev2'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
         },
         breakpoints: {
           0: {
-            spaceBetween: 0,
-            slidesPerView: 1
+            slidesPerView: 1,
+            spaceBetween: 20
+            },  
+          479: {
+            slidesPerView: 1,
+            spaceBetween: 20
           },
-          480: {
-            spaceBetween: 0,
-            slidesPerView: 1
+          767: {
+            slidesPerView: 2,
+            spaceBetween: 30
           },
-          768: {
-            spaceBetween: 20,
-            slidesPerView: 2
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 3
-          }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.blog .swiper-slide')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.blog .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.blog .swiper-slide'))
-            })
+          1023: {
+            slidesPerView: 3,
+            spaceBetween: 40
           }
         }
-      }
-  
-      blogSliders.push(new Swiper('.blog_s' + i, options))
-    })
+      })
 
 
 
-    // Путешествия слайдер
-
-      const tourSliders = [],
-      tour = document.querySelectorAll('.tour-slider')
-  
-      tour.forEach(function (el, i) {
-      el.classList.add('tour_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
+      const swiper3 = new Swiper('.tour-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
         navigation: {
-          nextEl: '.swiper-button-next3',
-          prevEl: '.swiper-button-prev3'
+            nextEl: '.swiper-button-next3',
+            prevEl: '.swiper-button-prev3'
         },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
         },
         breakpoints: {
-          0: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          480: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          768: {
-            spaceBetween: 20,
-            slidesPerView: 2
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 3
-          }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.tour .swiper-slide')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.tour .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.tour .swiper-slide'))
-            })
-          }
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20
+              },  
+            479: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            1023: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            }          
         }
-      }
-  
-      tourSliders.push(new Swiper('.tour_s' + i, options))
-    })
+      })
 
 
-    // Школа инструкторов слайдер    
-
-      const schoolSliders = [],
-      school = document.querySelectorAll('.school-slider')
-  
-      school.forEach(function (el, i) {
-      el.classList.add('school_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
+      const swiper4 = new Swiper('.school-slider', {
+        slidesPerView: 4,
+        spaceBetween: 30,
         navigation: {
-          nextEl: '.swiper-button-next4',
-          prevEl: '.swiper-button-prev4'
+            nextEl: '.swiper-button-next4',
+            prevEl: '.swiper-button-prev4'
         },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
         },
         breakpoints: {
-          0: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          480: {
-            spaceBetween: 0,
-            slidesPerView: 2
-          },
-          768: {
-            spaceBetween: 20,
-            slidesPerView: 3
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 4
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20
+              },  
+            479: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            767: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            1023: {
+              slidesPerView: 4,
+              spaceBetween: 30
+            }
           }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.school .swiper-slide')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.school .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.school .swiper-slide'))
-            })
-          }
-        }
-      }
-  
-      schoolSliders.push(new Swiper('.school_s' + i, options))
-    })
+      })
 
 
 
-    // Похожие материалы слайдер
 
       const materialsSliders = [],
       materials = document.querySelectorAll('.materials-slider')
@@ -345,7 +211,7 @@ $(() => {
 
 
 
-    // Первый маленький слайдер со страницы поста
+
 
     const littleSliders = [],
     little = document.querySelectorAll('.slider-little')
@@ -390,12 +256,12 @@ $(() => {
       },
       on: {
         init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('.slider-little .swiper-slide')))
+          setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
         },
         resize: swiper => {
           setTimeout(() => {
-            $(swiper.$el).find('.slider-little .swiper-slide').height('auto')
-            setHeight($(swiper.$el).find('.slider-little .swiper-slide'))
+            $(swiper.$el).find('.swiper-slide').height('auto')
+            setHeight($(swiper.$el).find('.swiper-slide'))
           })
         }
       }
@@ -405,8 +271,6 @@ $(() => {
   })
 
 
-
-// Второй маленький слайдер со страницы поста
 
   const little2Sliders = [],
   little2 = document.querySelectorAll('.slider-little2')
@@ -451,12 +315,12 @@ $(() => {
     },
     on: {
       init: swiper => {
-        setTimeout(() => setHeight($(swiper.$el).find('.slider-little2')))
+        setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
       },
       resize: swiper => {
         setTimeout(() => {
-          $(swiper.$el).find('.slider-little2').height('auto')
-          setHeight($(swiper.$el).find('.slider-little2'))
+          $(swiper.$el).find('.swiper-slide').height('auto')
+          setHeight($(swiper.$el).find('.swiper-slide'))
         })
       }
     }
@@ -469,58 +333,64 @@ $(() => {
 
     
 
-$(window).on('resize', () => {
-	let windowW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+    $(document).on('change', '.error', function () {
 
-	if (typeof WW !== 'undefined' && WW != windowW) {
-		// Моб. версия
-		if (!firstResize) {
-			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
+        $(this).removeClass('error');
+        if ($(this).attr('class') != 'checked') { $(this).next().hide(); }
+    })
 
-			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+    $(document).on('click', '.submit_btn', function (event) {
+        event.preventDefault();
+        var dataForAjax = "action=form&";
+        var addressForAjax = myajax.url;
+        var valid = true;
+        var form = $(this).closest('form');
+        $(this).closest('form').find('input:not([type=submit]),textarea').each(function (i, elem) {
+            if (this.value.length < 3 && $(this).hasClass('required')) {
+                valid = false;
+                $(this).addClass('error');
+                $(this).next().show();
+            }
+            if ($(this).attr('name') == 'email' && $(this).hasClass('required')) {
+                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                if (!pattern.test($(this).val())) {
+                    valid = false;
+                    $(this).addClass('error');
+                    $(this).next().show();
+                }
+            }
+            if ($(this).hasClass("checked") && !$(this).prop("checked")) {
+                $(this).addClass('error');
+                valid = false;
+            }
 
-			firstResize = true
-		} else {
-			firstResize = false
-		}
+            if (i > 0) {
+                dataForAjax += '&';
+            }
+            dataForAjax += this.name + '=' + this.value;
+        })
 
+        if (!valid) {
+            return false;
+        }
 
-		// Фикс. шапка
-		headerInit = false
-		$('.header_wrap').height('auto')
+        $.ajax({
+            type: 'POST',
+            data: dataForAjax,
+            url: addressForAjax,
+            success: function (response) {
 
-		setTimeout(() => {
-			headerInit = true
-			headerHeight = $('header').outerHeight()
+                Fancybox.close()
 
-			$('.header_wrap').height(headerHeight)
+                Fancybox.show([{
+                    src: "#thanks",
+                    type: 'inline'
+                }])
 
-			headerInit && $(window).scrollTop() > headerHeight
-				? $('header').addClass('fixed')
-				: $('header').removeClass('fixed')
-		}, 100)
-
-
-		// Фикс. моб. шапка
-		mobHeaderInit = false
-		$('.mob_header_wrap').height('auto')
-
-		setTimeout(() => {
-			mobHeaderInit = true
-			mobHeaderHeight = $('.mob_header').outerHeight()
-
-			$('.mob_header_wrap').height(mobHeaderHeight)
-
-			mobHeaderInit && $(window).scrollTop() > 0
-				? $('.mob_header').addClass('fixed')
-				: $('.mob_header').removeClass('fixed')
-		}, 100)
-
-
-		// Перезапись ширины окна
-		WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
-	}
-})
+                $('form').trigger("reset");
+            }
+        });
+    });
 
 
 })

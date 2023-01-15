@@ -48,11 +48,14 @@
     .school {
         padding: 30px 0 80px;
     }
-    .blog_item-link a {
+    .blog_item-link {
         line-height: 50px;
         max-width: 100%;
         min-height: 50px;
         border-radius: 10px;
+    }
+    .blog-page .tour_item-link {
+        max-width: 100%;
     }
     .block_head {
         margin-bottom: 15px;

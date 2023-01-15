@@ -1230,6 +1230,7 @@ footer {
     line-height: 137%;
     color: #212121;
     margin-top: 5px;
+    transition: all .3s;
 }
 .tour_item-text {
     font-weight: 400;
@@ -1256,6 +1257,10 @@ footer {
     border-radius: 15px;
     display: block;
     margin: 24px auto 0;
+    transition: all .3s;
+}
+.tour_item-link:hover {
+    background: #ffb547;
 }
 .tour_item {
     transition: all .4s;
@@ -1364,6 +1369,10 @@ footer {
     line-height: 137%;
     color: #A7A7A7;
     margin-bottom: 15px;
+    transition: all .3s;
+}
+.blog-page_tag a:hover {
+    color: #000;
 }
 .blog-page_tag span {
     text-decoration: underline;
@@ -1371,6 +1380,19 @@ footer {
     font-size: 14px;
     line-height: 137%;
     color: #212121;
+    transition: all .3s;
+}
+.blog-page_tag span:hover {
+    text-decoration: none;
+}
+.blog-page .tour_item-link {
+    max-width: 292px;
+    margin-right: auto;
+    margin-left: 0;
+    transition: all .4s;
+}
+.blog-page .tour_item-link:hover {
+    background: #ffb547;
 }
 
 
@@ -1836,6 +1858,26 @@ footer {
     transform: translateX(-50%);
     background: url(../images/header_bg3.png);
 }
+
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+.grid-item {
+    float: left;
+    margin-bottom: 30px;
+}
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+  
 
 
 

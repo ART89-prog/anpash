@@ -62,6 +62,27 @@ $(() => {
 
 
 
+  
+// init Masonry
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+  columnWidth: '.grid-sizer',
+  itemSelector: '.grid-item',
+  gutter: 30,
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
+
+
+
+
+
+
 
   // Большой слайдер
 

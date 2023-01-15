@@ -587,6 +587,9 @@ header .menu .item.current-menu-item>a:after {
 .about_item {
     margin-right: 60px;
 }
+.about_item:last-child {
+    margin-right: 0px;
+}
 .about_item-text {
     font-weight: 400;
     font-size: 18px;
@@ -636,6 +639,7 @@ header .menu .item.current-menu-item>a:after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: all .4s;
 }
 .swiper-button-next {
     width: 50px;
@@ -646,6 +650,7 @@ header .menu .item.current-menu-item>a:after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: all .4s;
 }
 .swiper-button-prev .icon,
 .swiper-button-next .icon {
@@ -762,26 +767,34 @@ header .menu .item.current-menu-item>a:after {
     margin: 40px auto 0;
     transition: all .4s;
 }
-.blog_item-link:hover {
+.blog_item:hover .blog_item-link {
     background: #ffb547;
 }
 .blog .swiper-button-prev2 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
+    transition: all .4s;
+}
+.blog .swiper-button-prev2:hover {
+    background: #ffb547;
 }
 .blog .swiper-button-next2 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
+    transition: all .4s;
+}
+.blog .swiper-button-next2:hover {
+    background: #ffb547;
 }
 .blog .swiper-button-prev2 .icon {
     fill: #8D5F1B;
@@ -807,20 +820,28 @@ header .menu .item.current-menu-item>a:after {
 .tour .swiper-button-prev3 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
+    transition: all .4s;
+}
+.tour .swiper-button-prev3:hover {
+    background: #ffb547;
 }
 .tour .swiper-button-next3 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 40%;
+    transition: all .4s;
+}
+.tour .swiper-button-next3:hover {
+    background: #ffb547;
 }
 .tour .swiper-button-prev3 .icon {
     fill: #8D5F1B;
@@ -846,20 +867,28 @@ header .menu .item.current-menu-item>a:after {
 .school .swiper-button-prev4 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 67%;
+    transition: all .4s;
+}
+.school .swiper-button-prev4:hover {
+    background: #ffb547;
 }
 .school .swiper-button-next4 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 67%;
+    transition: all .4s;
+}
+.school .swiper-button-next4:hover {
+    background: #ffb547;
 }
 .school .school-slider {
     padding-bottom: 32px;
@@ -1017,6 +1046,7 @@ footer {
     color: var(--text_color);
     padding: 10px 10px;
     margin-right: 20px;
+    transition: all .4s;
 }
 .inside-page header .menu .item > a:hover {
     color: #fff;
@@ -1259,7 +1289,7 @@ footer {
     margin: 24px auto 0;
     transition: all .3s;
 }
-.tour_item-link:hover {
+.tour_item:hover .tour_item-link {
     background: #ffb547;
 }
 .tour_item {
@@ -1391,7 +1421,7 @@ footer {
     margin-left: 0;
     transition: all .4s;
 }
-.blog-page .tour_item-link:hover {
+.blog-page .tour_item:hover .tour_item-link {
     background: #ffb547;
 }
 
@@ -1422,7 +1452,6 @@ footer {
     margin-left: 33px;
     margin-bottom: 30px;
     position: relative;
-    transition: all .4s;
 }
 .photo_item-title {
     position: absolute;
@@ -1433,6 +1462,7 @@ footer {
     font-size: 20px;
     line-height: 137%;
     color: #FFFFFF;
+    transition: all .4s;
 }
 .photo_item-date {
     font-weight: 400;
@@ -1447,13 +1477,14 @@ footer {
     left: 20px;
     width: 105px;
     height: 28px;
-    display: none;
+    opacity: 0;
+    transition: all .4s;
 }
 .photo_item:hover .photo_item-title {
     color: #FFD494;
 }
 .photo_item:hover .photo_item-date {
-    display: block;
+    opacity: 1;
 }
 
 .about-page {
@@ -1632,20 +1663,28 @@ footer {
 .swiper-button-prev6 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 50%;
+    transition: all .4s;
+}
+.swiper-button-prev6:hover {
+    background: #ffb547;
 }
 .swiper-button-next6 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 50%;
+    transition: all .4s;
+}
+.swiper-button-next6:hover {
+    background: #ffb547;
 }
 .swiper-button-prev6 .icon {
     fill: #8D5F1B;
@@ -1674,23 +1713,26 @@ footer {
 .swiper-button-prev7 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
     left: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .4s;
+}
+.swiper-button-prev7:hover {
+    background: #ffb547;
 }
 .swiper-button-next7 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
@@ -1702,6 +1744,10 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .4s;
+}
+.swiper-button-next7:hover {
+    background: #ffb547;
 }
 .swiper-button-prev7 .icon {
     fill: #8D5F1B;
@@ -1740,7 +1786,7 @@ footer {
 .swiper-button-prev8 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
@@ -1752,11 +1798,15 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .4s;
+}
+.swiper-button-prev8:hover {
+    background: #ffb547;
 }
 .swiper-button-next8 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(0deg, #FFD494, #FFD494), #C5C5C5;
+    background: #FFD494;
     opacity: 1;
     border-radius: 90px;
     position: absolute;
@@ -1768,6 +1818,10 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .4s;
+}
+.swiper-button-next8:hover {
+    background: #ffb547;
 }
 .swiper-button-prev8 .icon {
     fill: #8D5F1B;
@@ -1795,6 +1849,13 @@ footer {
     bottom: 13px;
 }
 
+.slider-big .swiper-button-next.swiper-button-disabled {
+    opacity: 0.1;
+}
+.slider-big .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.1;
+}
+
 .swiper-slide.visible {
     visibility: visible;
     pointer-events: auto;
@@ -1816,8 +1877,7 @@ footer {
 .school-slider .swiper-slide,
 .slider-little .swiper-slide,
 .slider-little2 .swiper-slide,
-.materials-slider .swiper-slide,
-.slider-big .swiper-slide {
+.materials-slider .swiper-slide {
     position: relative;
     visibility: hidden;
     width: auto;
@@ -1830,8 +1890,7 @@ footer {
 .school-slider .swiper-slide.visible,
 .slider-little .swiper-slide.visible,
 .slider-little2 .swiper-slide.visible,
-.materials-slider .swiper-slide.visible,
-.slider-big .swiper-slide.visible {
+.materials-slider .swiper-slide.visible {
     visibility: visible;
     pointer-events: auto;
     opacity: 1;

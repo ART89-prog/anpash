@@ -26,6 +26,26 @@ $(() => {
 
 
 
+    	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: "Закрыть",
+		NEXT: "Следующий",
+		PREV: "Предыдущий",
+		MODAL: "Вы можете закрыть это модальное окно нажав клавишу ESC"
+	}
+
+	Fancybox.defaults.template = {
+		closeButton: '<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>',
+		spinner: '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="25 25 50 50" tabindex="-1"><circle cx="50" cy="50" r="20"/></svg>',
+		main: null
+	}
+
+  
+
 	$('body').on('click', '.modal_link', function (e) {
 	    e.preventDefault()
 
@@ -50,7 +70,7 @@ $(() => {
       var d_height = $(document).height(); // Высота всего документа
       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-          $('.about_item-col').css('opacity', '1');
+          $('.about_item-col').css('opacity', '0');
           $('.about_item-col').spincrement({
               thousandSeparator: "",
               duration: 1200
@@ -64,7 +84,6 @@ $(() => {
 
   
 // init Masonry
-if (typeof grid !== 'undefined' )
 var grid = document.querySelector('.grid');
 
 var msnry = new Masonry(grid, {
@@ -521,7 +540,7 @@ $(window).on('resize', () => {
 		if (!firstResize) {
 			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
 
-			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+			if (windowW < 360) document.getElementsByTagName('meta')['viewport'].content = 'width=360, user-scalable=no'
 
 			firstResize = true
 		} else {

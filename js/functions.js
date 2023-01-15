@@ -29,12 +29,36 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Моб. версия
 	firstResize = false
 
-	if (document.body.clientWidth < 375) {
-		document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+	if (document.body.clientWidth < 360) {
+		document.getElementsByTagName('meta')['viewport'].content = 'width=360, user-scalable=no'
 
 		firstResize = true
 	}
+	
+	if (is_touch_device()) {
+		// Закрытие моб. меню свайпом справо на лево
+		let ts
+
+		$('body').on('touchstart', (e) => { ts = e.originalEvent.touches[0].clientX })
+
+		$('body').on('touchend', (e) => {
+			let te = e.originalEvent.changedTouches[0].clientX
+
+			if ($('body').hasClass('menu_open') && ts > te + 50) {
+				// Свайп справо на лево
+				$('header .mob_menu_btn').removeClass('active')
+				$('body').removeClass('menu_open')
+				$('header .menu').removeClass('show')
+				$('.overlay').fadeOut(300)
+			} else if (ts < te - 50) {
+				// Свайп слева на право
+			}
+		})
+	}	
 })
+
+
+
 
 
 

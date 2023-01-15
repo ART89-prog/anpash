@@ -2,7 +2,7 @@
 
     :root {
         --font_size: 14px;
-        --font_size_title: 32px;
+        --font_size_title: 28px;
     }
     .header_bottom-title {
         font-size: 28px;
@@ -84,9 +84,6 @@
     }
     .tour-page {
         padding-bottom: 30px;
-    }
-    .tour-page_title {
-        font-size: 22px;
     }
     .pagination a {
         width: 30px;

@@ -38,6 +38,11 @@
         font-size: 15px;
         line-height: 22px;
     }
+    .about_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .slider-big .swiper-slide span {
         bottom: 45px;
         line-height: 140%;
@@ -174,6 +179,11 @@
         justify-content: space-around;
         margin-bottom: 15px;
         margin-top: 15px;
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: calc(50% - 30px);
     }
 
 

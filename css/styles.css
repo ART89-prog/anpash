@@ -641,6 +641,12 @@ header .menu .item.current-menu-item>a:after {
     transform: translateY(-50%);
     transition: all .4s;
 }
+.swiper-button-prev:hover {
+    opacity: 0.8;
+}
+.swiper-button-next:hover {
+    opacity: 0.8;
+}
 .swiper-button-next {
     width: 50px;
     height: 50px;
@@ -1737,7 +1743,6 @@ footer {
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
     right: 24px;
     display: flex;
@@ -1850,10 +1855,10 @@ footer {
 }
 
 .slider-big .swiper-button-next.swiper-button-disabled {
-    opacity: 0.1;
+    opacity: 0.2;
 }
 .slider-big .swiper-button-prev.swiper-button-disabled {
-    opacity: 0.1;
+    opacity: 0.2;
 }
 
 .swiper-slide.visible {
@@ -1926,7 +1931,7 @@ footer {
 }
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: calc(33.333% - 30px);
 }
 .grid-item {
     float: left;

@@ -44,7 +44,7 @@ $(() => {
 		main: null
 	}
 
-  
+
 
 	$('body').on('click', '.modal_link', function (e) {
 	    e.preventDefault()

@@ -148,6 +148,10 @@
         bottom: 30px !important;
     }
  
+    .grid-sizer,
+    .grid-item {
+        width: 100%;
+    }
  
 
    

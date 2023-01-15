@@ -1782,7 +1782,8 @@ footer {
 .school-slider .swiper-slide,
 .slider-little .swiper-slide,
 .slider-little2 .swiper-slide,
-.materials-slider .swiper-slide {
+.materials-slider .swiper-slide,
+.slider-big .swiper-slide {
     position: relative;
     visibility: hidden;
     width: auto;
@@ -1795,11 +1796,23 @@ footer {
 .school-slider .swiper-slide.visible,
 .slider-little .swiper-slide.visible,
 .slider-little2 .swiper-slide.visible,
-.materials-slider .swiper-slide.visible {
+.materials-slider .swiper-slide.visible,
+.slider-big .swiper-slide.visible {
     visibility: visible;
     pointer-events: auto;
     opacity: 1;
 }
+
+.lazyload,
+.swiper-lazy {
+    transition: opacity .5s linear;
+    opacity: 0;
+}
+.lazyload.loaded,
+.swiper-lazy-loaded {
+    opacity: 1;
+}
+
 
 
 

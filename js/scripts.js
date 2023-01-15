@@ -40,22 +40,65 @@ $(() => {
 
 
 
-    // Большой слайдер
 
-    const swiper = new Swiper('.slider-big', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        }    
-      })
+  // Большой слайдер
 
+  const bigSliders = [],
+  big = document.querySelectorAll('.slider-big')
+
+  big.forEach(function (el, i) {
+  el.classList.add('big_s' + i)
+
+  let options = {
+    loop: false,
+    speed: 500,
+    watchSlidesProgress: true,
+    slideActiveClass: 'active',
+    slideVisibleClass: 'visible',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    preloadImages: false,
+    lazy: {
+      enabled: true,
+      checkInView: true,
+      loadOnTransitionStart: true,
+      loadPrevNext: true
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      },
+      480: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      },
+      768: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      },
+      1280: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      }
+    },
+    on: {
+      init: swiper => {
+        setTimeout(() => setHeight($(swiper.$el).find('.slider-big')))
+      },
+      resize: swiper => {
+        setTimeout(() => {
+          $(swiper.$el).find('.slider-big').height('auto')
+          setHeight($(swiper.$el).find('.slider-big'))
+        })
+      }
+    }
+  }
+
+  bigSliders.push(new Swiper('.big_s' + i, options))
+})
 
 
 
